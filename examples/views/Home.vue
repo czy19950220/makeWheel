@@ -306,6 +306,7 @@
       .sidebar {
         position: fixed;
         margin-right: 40px;
+        margin-left: 10px;
         width: 200px;
         height: 80%;
         top: 135px;

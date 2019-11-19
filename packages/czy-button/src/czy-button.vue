@@ -1,6 +1,14 @@
 <template>
   <button
-    :class="{'czy-button-primary':type === 'primary' || type === 'customize','czy-button-success':type === 'success','czy-button-dashed':type === 'dashed','czy-button-dotted':type === 'dotted','czy-button-danger':type === 'danger','czy-button-warning':type === 'warning','ripple':animation,'disabled':disabled,'circle':circle,'block':block,'width-100':block}"
+    :class="{'czy-button-primary':type === 'primary' || type === 'customize',
+    'czy-button-success':type === 'success',
+    'czy-button-dashed':type === 'dashed',
+    'czy-button-dotted':type === 'dotted',
+    'czy-button-danger':type === 'danger',
+    'czy-button-warning':type === 'warning',
+    'ripple':animation,'disabled':disabled,
+    'circle':circle,'block':block,
+    'width-100':block}"
     :disabled="disabled"
     :style="customizeColor"
     @click="click"

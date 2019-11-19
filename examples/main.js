@@ -23,6 +23,13 @@ Vue.use(VueHighlightJS)
 
 Vue.config.productionTip = false
 
+//region:router路由设置
+router.beforeEach((to, from, next) => {
+  window.document.title = to.meta.title == undefined?'CZY-UI':to.meta.title;
+  next();
+})
+//endregion
+
 new Vue({
   router,
   store,
