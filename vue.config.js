@@ -34,7 +34,7 @@ module.exports = {
     loaderOptions: {
       // 给 sass-loader 传递选项
       sass: {
-        data: `@import "public/css/czy-vue-ui.scss";`
+        prependData: `@import "public/css/czy-vue-ui.scss";`
       }
     },
   },

@@ -4,11 +4,22 @@ import router from './router'
 import store from './store'
 import './registerServiceWorker'
 
-//导入组件库
+//region:导入样式
+import '../public/css/cover.scss';
+import '../public/iconfont/iconfont.css';
+import '../public/css/animate.min.css'
+//endregion
+
+//region:导入组件库
 import CzyUI from './../packages';
-import './../public/stylesheets/index.scss'
-//注册组件库
+import VueHighlightJS from 'vue-highlightjs'
+import 'highlight.js/styles/atom-one-dark.css'
+//endregion
+
+//region:注册组件库
 Vue.use(CzyUI);
+Vue.use(VueHighlightJS)
+//endregion
 
 Vue.config.productionTip = false
 
