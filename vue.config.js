@@ -27,5 +27,22 @@ module.exports = {
         // 修改它的选项...
         return options
       })
-  }
+  },
+
+  css: {
+    extract: false,
+    loaderOptions: {
+      // 给 sass-loader 传递选项
+      sass: {
+        data: `@import "public/css/czy-vue-ui.scss";`
+      }
+    },
+  },
+
+  publicPath: './',
+  outputDir: 'lib',
+  runtimeCompiler: undefined,
+  productionSourceMap: undefined,
+  parallel: undefined
+
 }
