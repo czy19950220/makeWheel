@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import czyInstallation from '../components/czyInstallation.vue'
-import czyIcon from '../components/czyIcon.vue'
 
 Vue.use(VueRouter)
 
@@ -19,7 +18,7 @@ const component = [
   {
     path: '/component/icon',
     name: 'czyIcon',
-    component: czyIcon,
+    component: () => import('../components/czyIcon.vue'),
     meta: {
       keepAlive: true,
       title: 'CZY-UI | 图标'
