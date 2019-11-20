@@ -13,18 +13,29 @@
             <ul class="pure-menu-list" v-if="item_1.li_data.length != 0">
               <li :key="item_2.path" class="nav-item" v-for="item_2 in item_1.li_data">
                 <div class="nav-group__title" v-if="item_2.group">{{item_2.group}}</div>
-                <a
+                <span
                         :class="{'active':active == item_2.id}"
                         :href="item_2.path"
-                        @click="active = item_2.id"
-                >{{item_2.name}}</a>
+                        @click="toPath(item_2.path,item_2.id)"
+                >{{item_2.name}}</span>
               </li>
             </ul>
           </li>
         </ul>
       </div>
       <div class="content" id="router_view_box">
-        <router-view/>
+        <keep-alive>
+          <router-view
+                  :key="$route.path"
+                  v-if="$route.meta.keepAlive">
+            <!-- 这里是会被缓存的视图组件，比如 Home！ -->
+          </router-view>
+        </keep-alive>
+        <router-view
+                :key="$route.path"
+                v-if="!$route.meta.keepAlive">
+          <!-- 这里是不被缓存的视图组件，比如 Edit！ -->
+        </router-view>
       </div>
     </div>
   </div>
@@ -40,8 +51,8 @@
           {
             title: '开发指南',
             li_data: [
-              {id: -1, name: '安装/快速上手', path: '#/component/installation'},
-              {id: -2, name: 'Icon 图标', path: '#/component/icon'}
+              {id: -1, name: '安装/快速上手', path: '/component/installation'},
+              {id: -2, name: 'Icon 图标', path: '/component/icon'}
             ]
           },
           {
@@ -51,7 +62,7 @@
                 id: '000',
                 group: '通用',
                 name: 'Button 按钮',
-                path: '#/component/button'
+                path: '/component/button'
               },
               {
                 id: '001',
@@ -168,7 +179,7 @@
     watch: {
       $route: function (to, from) {
         if (from.path != to.path) {
-          document.documentElement.scrollTop = 0
+          //document.documentElement.scrollTop = 0
         }
       }
     },
@@ -251,7 +262,12 @@
           break
       }
     },
-    methods: {}
+    methods: {
+      toPath(path,id){
+        this.active = id
+        this.$router.push(path)
+      }
+    }
   }
 </script>
 <style lang="scss" scoped>
@@ -346,7 +362,7 @@
           }
 
           .pure-menu-list {
-            a {
+            span {
               display: block;
               height: 40px;
               color: #444;
@@ -356,6 +372,7 @@
               white-space: nowrap;
               text-overflow: ellipsis;
               font-weight: 400;
+              cursor: pointer;
 
               &:hover {
                 color: #409eff;
