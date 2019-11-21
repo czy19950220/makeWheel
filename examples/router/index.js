@@ -33,6 +33,15 @@ const component = [
       title: 'CZY-UI | Button'
     }
   },
+  {
+    path: '/component/shadow',
+    name: 'czyShadowDemo',
+    component: () => import('../components/czyShadowDemo.vue'),
+    meta: {
+      keepAlive: true,
+      title: 'CZY-UI | Shadow'
+    }
+  },
 
 ]
 

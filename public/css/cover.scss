@@ -1,38 +1,46 @@
-/*滚动条样式*/
+/*!*滚动条样式*!
 div::-webkit-scrollbar {
-    /*滚动条整体样式*/
-    width: 5px !important;
-    /*高宽分别对应横竖滚动条的尺寸*/
-    height: 5px !important;
+    !*滚动条整体样式*!
+    width: 6px !important;
+    !*高宽分别对应横竖滚动条的尺寸*!
+    height: 6px !important;
 }
 
 div::-webkit-scrollbar-thumb {
-    /* 滚动条里面小方块 */
-    background: #eee !important;
+    !* 滚动条里面小方块 *!
+    background: #9093994d !important;
+    border-radius: 4px !important;
+    &:hover{
+        background: #ff0000 !important;
+    }
 }
 
 div::-webkit-scrollbar-track {
-    /*滚动条里面轨道*/
+    !*滚动条里面轨道*!
     background: #fff !important;
 }
 
-/*滚动条样式*/
+!*滚动条样式*!
 html::-webkit-scrollbar {
-    /*滚动条整体样式*/
-    width: 7px !important;
-    /*高宽分别对应横竖滚动条的尺寸*/
-    height: 7px !important;
+    !*滚动条整体样式*!
+    width: 8px !important;
+    !*高宽分别对应横竖滚动条的尺寸*!
+    height: 8px !important;
 }
 
 html::-webkit-scrollbar-thumb {
-    /* 滚动条里面小方块 */
+    !* 滚动条里面小方块 *!
     background: #b6b6b6 !important;
+    border-radius: 4px !important;
+    &:hover{
+        background: #ff0000 !important;
+    }
 }
 
 html::-webkit-scrollbar-track {
-    /*滚动条里面轨道*/
+    !*滚动条里面轨道*!
     background: #fff !important;
-}
+}*/
 
 a,
 a:active,

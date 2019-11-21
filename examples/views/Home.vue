@@ -1,12 +1,12 @@
 <template>
-  <div class="home">
+  <div class="home" data-simplebar>
     <div class="header">
       <div class="container">
         <span class="title">CZY-UI</span>
       </div>
     </div>
     <div class="main">
-      <div class="sidebar">
+      <div class="sidebar" data-simplebar>
         <ul>
           <li :key="item_1.title" class="nav-item" v-for="item_1 in ul_data">
             <a>{{item_1.title}}</a>
@@ -67,13 +67,13 @@
               {
                 id: '001',
                 name: 'Shadow 投影',
-                path: '#/component/shadow'
+                path: '/component/shadow'
               },
               {
                 id: '100',
                 group: '数据录入',
                 name: 'Input 输入框',
-                path: '#/component/input'
+                path: '/component/input'
               },
               {
                 id: '101',

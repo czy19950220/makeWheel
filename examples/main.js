@@ -4,6 +4,11 @@ import router from './router'
 import store from './store'
 import './registerServiceWorker'
 
+//region:滚动条
+import 'simplebar'; // or "import SimpleBar from 'simplebar';" if you want to use it manually.
+import 'simplebar/dist/simplebar.css';
+//endregion
+
 //region:导入样式
 import '../public/css/cover.scss';
 import '../public/iconfont/iconfont.css';
