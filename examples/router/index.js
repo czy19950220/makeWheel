@@ -8,7 +8,6 @@ const component = [
   {
     path: '/component/installation',
     name: 'czyInstallation',
-
     component: czyInstallation,
     meta: {
       keepAlive: true,
@@ -42,8 +41,28 @@ const component = [
       title: 'CZY-UI | Shadow'
     }
   },
+  {
+    path: '/component/input',
+    name: 'czyInputDemo',
+    component: () => import('../components/czyInputDemo.vue'),
+    meta: {
+      keepAlive: true,
+      title: 'CZY-UI | 输入框'
+    }
+  },
 
 ]
+const elseComponent = [
+  {
+    path: '/component/scroll-bar',
+    name: 'vueSimplebar',
+    component: () => import('../components/vueSimplebar.vue'),
+    meta: {
+      keepAlive: true,
+      title: 'CZY-UI | 滚动条'
+    }
+  },
+];
 
 const routes = [
   {
@@ -54,6 +73,7 @@ const routes = [
     children: [
       //组件
       ...component,
+      ...elseComponent,
     ]
   },
 

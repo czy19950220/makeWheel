@@ -4,9 +4,9 @@
     <p class="demo-introduction">语义化的矢量图形。</p>
 
     <czy-anchor>
-      <czy-anchor-link href="czy-simple" title="使用方法"/>
-      <czy-anchor-link href="czy-ofen-list" title="常用图标"/>
-      <czy-anchor-link href="czy-list" title="图标集合"/>
+      <czy-anchor-link-simplebar href="czy-simple" title="使用方法"/>
+      <czy-anchor-link-simplebar href="czy-ofen-list" title="常用图标"/>
+      <czy-anchor-link-simplebar href="czy-list" title="图标集合"/>
     </czy-anchor>
 
     <div class="demo-tip">

@@ -37,6 +37,9 @@ import WidgetModal from './czy-widget-modal'
 import VueCropper from './vue-cropper'
 import VueDragResize from './vue-drag-resize'
 
+
+import AnchorLinkSimplebar from './czy-anchor-link-simplebar'
+
 // 所有组件列表
 const components = [
   CzyTest,
@@ -67,7 +70,9 @@ const components = [
   WidgetModal,
 
   VueDragResize,
-  VueCropper
+  VueCropper,
+
+  AnchorLinkSimplebar
 ]
 // 定义 install 方法，接收 Vue 作为参数
 const install = function (Vue) {

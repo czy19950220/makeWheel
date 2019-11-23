@@ -1,11 +1,11 @@
 <template>
-  <div class="home" data-simplebar>
+  <div class="home" id="home" data-simplebar>
     <div class="header">
       <div class="container">
         <span class="title">CZY-UI</span>
       </div>
     </div>
-    <div class="main">
+    <div class="main" id="main">
       <div class="sidebar" data-simplebar>
         <ul>
           <li :key="item_1.title" class="nav-item" v-for="item_1 in ul_data">
@@ -169,6 +169,11 @@
                 id: -104,
                 name: 'Loading素材',
                 path: '#/component/epic-spinners'
+              },
+              {
+                id: -105,
+                name: 'ScrollBar滚动条',
+                path: '/component/scroll-bar'
               }
             ]
           }
@@ -259,6 +264,9 @@
           break
         case '/component/epic-spinners':
           this.active = -104
+          break
+        case '/component/scroll-bar':
+          this.active = -105
           break
       }
     },

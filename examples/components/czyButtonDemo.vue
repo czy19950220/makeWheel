@@ -4,12 +4,12 @@
     <p class="demo-introduction">按钮用于开始一个即时操作。</p>
 
     <czy-anchor>
-      <czy-anchor-link href="button-simple" title="基础用法" />
-      <czy-anchor-link href="button-disabled" title="禁用" />
-      <czy-anchor-link href="button-circle" title="圆形按钮" />
-      <czy-anchor-link href="button-customize" title="自定义颜色" />
-      <czy-anchor-link href="button-block" title="block按钮" />
-      <czy-anchor-link href="api" title="API" />
+      <czy-anchor-link-simplebar href="button-simple" title="基础用法" />
+      <czy-anchor-link-simplebar href="button-disabled" title="禁用" />
+      <czy-anchor-link-simplebar href="button-circle" title="圆形按钮" />
+      <czy-anchor-link-simplebar href="button-customize" title="自定义颜色" />
+      <czy-anchor-link-simplebar href="button-block" title="block按钮" />
+      <czy-anchor-link-simplebar href="api" title="API" />
     </czy-anchor>
 
     <!-- 基础用法DEMO -->
