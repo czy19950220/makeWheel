@@ -33,6 +33,7 @@ import ModelMask from './czy-model-mask'
 import DateRangePicker from './czy-date-range-picker'
 import CountryPicker from './czy-country-picker'
 import WidgetModal from './czy-widget-modal'
+import HoverEffect from './czy-hover-effect'
 
 import VueCropper from './vue-cropper'
 import VueDragResize from './vue-drag-resize'
@@ -68,6 +69,7 @@ const components = [
   DateRangePicker,
   CountryPicker,
   WidgetModal,
+  HoverEffect,
 
   VueDragResize,
   VueCropper,

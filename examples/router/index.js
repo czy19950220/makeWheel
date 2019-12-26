@@ -42,6 +42,15 @@ const component = [
     }
   },
   {
+    path: '/component/hover-effect',
+    name: 'czyHoverEffectDemo',
+    component: () => import('../components/czyHoverEffectDemo.vue'),
+    meta: {
+      keepAlive: true,
+      title: 'CZY-UI | HoverEffect'
+    }
+  },
+  {
     path: '/component/input',
     name: 'czyInputDemo',
     component: () => import('../components/czyInputDemo.vue'),

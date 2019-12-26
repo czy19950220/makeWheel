@@ -70,6 +70,11 @@
                 path: '/component/shadow'
               },
               {
+                id: '002',
+                name: 'HoverEffect 悬浮特效',
+                path: '/component/hover-effect'
+              },
+              {
                 id: '100',
                 group: '数据录入',
                 name: 'Input 输入框',
@@ -186,94 +191,102 @@
         if (from.path != to.path) {
           //document.documentElement.scrollTop = 0
         }
+        this.switchRouter();
       }
     },
     mounted() {
-      switch (this.$router.history.current.fullPath) {
-        case '/component/installation':
-          this.active = -1
-          break
-        case '/component/icon':
-          this.active = -2
-          break
-        case '/component/input':
-          this.active = '100'
-          break
-        case '/component/statistic':
-          this.active = '200'
-          break
-        case '/component/img-card':
-          this.active = '201'
-          break
-        case '/component/collapse':
-          this.active = '300'
-          break
-        case '/component/backtop':
-          this.active = '301'
-          break
-        case '/component/button':
-          this.active = '000'
-          break
-        case '/component/shadow':
-          this.active = '001'
-          break
-        case '/component/footertoolbar':
-          this.active = '302'
-          break
-        case '/component/drawer':
-          this.active = '303'
-          break
-        case '/component/uploadimg':
-          this.active = '101'
-          break
-        case '/component/anchor':
-          this.active = '304'
-          break
-        case '/component/divider':
-          this.active = '305'
-          break
-        case '/component/meunsimple':
-          this.active = '306'
-          break
-        case '/component/model-mask':
-          this.active = '202'
-          break
-        case '/component/date-picker':
-          this.active = '102'
-          break
-        case '/component/country-picker':
-          this.active = '103'
-          break
-        case '/component/widget-modal':
-          this.active = '307'
-          break
-        case '/component/vue-drag-resize':
-          this.active = -100
-          break
-        case '/component/vue-cropper':
-          this.active = -99
-          break
-        case '/component/vue-cookies':
-          this.active = -101
-          break
-        case '/component/vue-word-cloud':
-          this.active = -102
-          break
-        case '/component/vue-status-indicator':
-          this.active = -103
-          break
-        case '/component/epic-spinners':
-          this.active = -104
-          break
-        case '/component/scroll-bar':
-          this.active = -105
-          break
-      }
+      this.switchRouter();
     },
     methods: {
       toPath(path,id){
         this.active = id
         this.$router.push(path)
+      },
+      //路由切换时改变active的值来确定当前是哪个导航
+      switchRouter(){
+        switch (this.$router.history.current.fullPath) {
+          case '/component/installation':
+            this.active = -1
+            break
+          case '/component/icon':
+            this.active = -2
+            break
+          case '/component/input':
+            this.active = '100'
+            break
+          case '/component/statistic':
+            this.active = '200'
+            break
+          case '/component/img-card':
+            this.active = '201'
+            break
+          case '/component/collapse':
+            this.active = '300'
+            break
+          case '/component/backtop':
+            this.active = '301'
+            break
+          case '/component/button':
+            this.active = '000'
+            break
+          case '/component/shadow':
+            this.active = '001'
+            break
+          case '/component/hover-effect':
+            this.active = '002'
+            break
+          case '/component/footertoolbar':
+            this.active = '302'
+            break
+          case '/component/drawer':
+            this.active = '303'
+            break
+          case '/component/uploadimg':
+            this.active = '101'
+            break
+          case '/component/anchor':
+            this.active = '304'
+            break
+          case '/component/divider':
+            this.active = '305'
+            break
+          case '/component/meunsimple':
+            this.active = '306'
+            break
+          case '/component/model-mask':
+            this.active = '202'
+            break
+          case '/component/date-picker':
+            this.active = '102'
+            break
+          case '/component/country-picker':
+            this.active = '103'
+            break
+          case '/component/widget-modal':
+            this.active = '307'
+            break
+          case '/component/vue-drag-resize':
+            this.active = -100
+            break
+          case '/component/vue-cropper':
+            this.active = -99
+            break
+          case '/component/vue-cookies':
+            this.active = -101
+            break
+          case '/component/vue-word-cloud':
+            this.active = -102
+            break
+          case '/component/vue-status-indicator':
+            this.active = -103
+            break
+          case '/component/epic-spinners':
+            this.active = -104
+            break
+          case '/component/scroll-bar':
+            this.active = -105
+            break
+        }
       }
     }
   }
