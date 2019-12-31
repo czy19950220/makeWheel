@@ -51,6 +51,15 @@ const component = [
     }
   },
   {
+    path: '/component/notice',
+    name: 'czyNoticeDemo',
+    component: () => import('../components/czyNoticeDemo.vue'),
+    meta: {
+      keepAlive: true,
+      title: 'CZY-UI | 提示'
+    }
+  },
+  {
     path: '/component/input',
     name: 'czyInputDemo',
     component: () => import('../components/czyInputDemo.vue'),

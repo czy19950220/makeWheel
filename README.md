@@ -8,6 +8,7 @@ npm install
 ### Compiles and hot-reloads for development
 ```
 npm run serve
+//然后打开网址就可以看文档了
 ```
 
 ### Compiles and minifies for production

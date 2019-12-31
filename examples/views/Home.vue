@@ -75,6 +75,11 @@
                 path: '/component/hover-effect'
               },
               {
+                id: '003',
+                name: 'notice 提示通知',
+                path: '/component/notice'
+              },
+              {
                 id: '100',
                 group: '数据录入',
                 name: 'Input 输入框',
@@ -234,6 +239,9 @@
             break
           case '/component/hover-effect':
             this.active = '002'
+            break
+          case '/component/notice':
+            this.active = '003'
             break
           case '/component/footertoolbar':
             this.active = '302'
